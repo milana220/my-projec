@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yana Abramchenko — Manicure Słupsk | Luxe</title>
+<meta name="description" content="Manicure żelowy i pedicure w Słupsku. Precyzja i dbałość o detal w przytulnym gabinecie przy Szczecińskiej 81. Umów wizytę na WhatsApp.">
+<meta name="theme-color" content="#0D0B0E">
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Yana Abramchenko — Manicure Słupsk",
+  "image": "photos/praca-1.jpg",
+  "telephone": "+48733074546",
+  "priceRange": "100-200 PLN",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Szczecińska 81",
+    "addressLocality": "Słupsk",
+    "addressCountry": "PL"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:30",
+    "closes": "18:00"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --color-black:#0D0B0E;
+    --color-graphite:#16131A;
+    --color-graphite-2:#1E1A22;
+    --color-gold-1:#D4AF37;
+    --color-gold-2:#F5E6B3;
+    --color-gold-gradient:linear-gradient(135deg, var(--color-gold-1), var(--color-gold-2));
+    --color-champagne:#E8DCC0;
+    --color-white:#FAFAF8;
+    --color-ink:#15121A;
+
+    --font-display:'Cormorant Garamond', serif;
+    --font-body:'Jost', sans-serif;
+
+    --space-1:8px;
+    --space-2:16px;
+    --space-3:24px;
+    --space-4:32px;
+    --space-5:48px;
+    --space-6:64px;
+    --space-7:96px;
+
+    --radius-sm:3px;
+    --radius-md:6px;
+    --radius-lg:10px;
+    --radius-pill:999px;
+
+    --shadow-soft:0 14px 34px -16px rgba(0,0,0,.7);
+    --shadow-lift:0 22px 48px -18px rgba(0,0,0,.8);
+    --glow-gold:0 0 28px rgba(212,175,55,.30);
+    --glow-gold-soft:0 0 46px rgba(212,175,55,.16);
+
+    --ease-out:cubic-bezier(.16,1,.3,1);
+    --dur-fast:200ms;
+    --dur:420ms;
+    --dur-slow:650ms;
+
+    --header-h:68px;
+    --bottom-bar-h:76px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    min-height:100dvh;
+    background:var(--color-black);
+    color:var(--color-white);
+    font-family:var(--font-body);
+    font-weight:300;
+    font-size:16px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:600; line-height:1.15; margin:0; }
+  p{ margin:0; }
+  button{ font:inherit; }
+
+  .container{ width:100%; max-width:1180px; margin-inline:auto; padding-inline:var(--space-3); }
+
+  /* Skip link */
+  .skip-link{
+    position:absolute; left:var(--space-2); top:-60px;
+    background:var(--color-gold-1); color:var(--color-black);
+    padding:.75em 1.25em; border-radius:var(--radius-sm);
+    z-index:1000; transition:top var(--dur) var(--ease-out); font-weight:600;
+  }
+  .skip-link:focus{ top:var(--space-2); }
+
+  :focus-visible{ outline:2px solid var(--color-gold-1); outline-offset:3px; }
+
+  /* ---------- Top nav (desktop) ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:60;
+    background:rgba(13,11,14,.86);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,55,.18);
+  }
+  .site-header .container{
+    height:var(--header-h);
+    display:flex; align-items:center; justify-content:space-between;
+    gap:var(--space-2);
+  }
+  .brand{
+    font-family:var(--font-display); font-weight:600; font-size:1.25rem; text-decoration:none;
+    white-space:nowrap; letter-spacing:.04em; color:var(--color-white);
+  }
+  .primary-nav{ display:none; }
+  .primary-nav ul{ display:flex; gap:var(--space-4); list-style:none; margin:0; padding:0; }
+  .primary-nav a{
+    text-decoration:none; font-weight:400; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--color-champagne);
+    padding:.5em 0; border-bottom:1px solid transparent; transition:color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  }
+  .primary-nav a:hover{ color:var(--color-gold-2); border-color:var(--color-gold-1); }
+  .site-header .header-cta{ display:none; }
+
+  @media (min-width:900px){
+    .primary-nav{ display:block; }
+    .site-header .header-cta{ display:inline-flex; }
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5em;
+    min-height:48px; padding:0 1.6em;
+    border-radius:var(--radius-pill);
+    font-weight:500; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; text-decoration:none;
+    cursor:pointer; border:1px solid var(--color-gold-1);
+    background:transparent; color:var(--color-gold-2);
+    transition:transform var(--dur-fast) var(--ease-out), box-shadow var(--dur) var(--ease-out), background var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+    touch-action:manipulation;
+  }
+  .btn:active{ transform:scale(.97); }
+  .btn-sage{
+    background:var(--color-gold-gradient); color:var(--color-black); border-color:transparent;
+    box-shadow:var(--glow-gold-soft); font-weight:600;
+  }
+  .btn-sage:hover{ box-shadow:var(--glow-gold); filter:brightness(1.08); }
+  .btn-outline{
+    background:transparent; color:var(--color-champagne); border:1px solid rgba(232,220,192,.45);
+  }
+  .btn-outline:hover{ border-color:var(--color-gold-1); color:var(--color-gold-2); box-shadow:var(--glow-gold-soft); }
+  .btn-sm{ min-height:42px; padding:0 1.25em; font-size:.78rem; }
+  .btn-block{ width:100%; }
+
+  .icon{ width:1.1em; height:1.1em; flex:none; fill:currentColor; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:100dvh;
+    display:flex; align-items:flex-end;
+    overflow:hidden;
+    color:var(--color-white);
+  }
+  .hero-glow{
+    position:absolute; inset:0; z-index:1;
+    background:radial-gradient(60% 50% at 50% 28%, rgba(212,175,55,.20) 0%, rgba(212,175,55,0) 65%);
+    pointer-events:none;
+  }
+  .hero-media{
+    position:absolute; inset:0; width:100%; height:100%;
+    overflow:hidden;
+  }
+  .hero-media video,
+  .hero-media .hero-fallback{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    will-change:transform;
+    filter:grayscale(.15) brightness(.72);
+  }
+  .hero-fallback{
+    background-image:url('photos/praca-1.jpg');
+    background-size:cover;
+    background-position:50% 30%;
+    display:none;
+  }
+  .hero-media.no-video .hero-fallback{ display:block; }
+  .hero-media.no-video video{ display:none; }
+  .hero-scrim{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(13,11,14,.55) 0%, rgba(13,11,14,.55) 35%, rgba(13,11,14,.96) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    width:100%;
+    padding:var(--space-7) var(--space-3) var(--space-6);
+    text-align:center;
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .hero-eyebrow{
+    font-size:.78rem; letter-spacing:.28em; text-transform:uppercase;
+    font-weight:500; color:var(--color-gold-2);
+    margin-bottom:var(--space-3);
+  }
+  .hero-name{
+    font-size:clamp(2.4rem, 9vw, 5.2rem);
+    text-transform:uppercase;
+    letter-spacing:clamp(.02em, .01em + 1vw, .12em);
+    color:var(--color-white);
+    margin-bottom:var(--space-3);
+  }
+  .hero-divider{
+    width:72px; height:1px;
+    background:var(--color-gold-gradient);
+    box-shadow:var(--glow-gold-soft);
+    margin-bottom:var(--space-3);
+  }
+  .hero-sub{
+    font-family:var(--font-display); font-style:italic;
+    font-size:clamp(1.1rem, 2.6vw, 1.5rem);
+    max-width:38ch;
+    color:var(--color-champagne);
+    margin-bottom:var(--space-2);
+  }
+  .hero-desc{
+    max-width:52ch;
+    color:rgba(250,250,248,.7);
+    margin-bottom:var(--space-4);
+    font-size:1rem;
+    font-weight:300;
+  }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:var(--space-2); justify-content:center; }
+  .hero-scroll-cue{
+    position:absolute; left:50%; bottom:var(--space-2); transform:translateX(-50%);
+    z-index:2; color:var(--color-gold-2);
+    display:flex; flex-direction:column; align-items:center; gap:4px;
+    font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+  }
+  .hero-scroll-cue .icon{ animation:bob 2.2s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(6px);} }
+
+  /* ---------- Section basics ---------- */
+  section{ padding:var(--space-6) 0; }
+  .section-head{ max-width:60ch; margin-bottom:var(--space-5); }
+  .eyebrow{
+    display:inline-block; font-size:.75rem; font-weight:500; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--color-gold-1);
+    margin-bottom:var(--space-2);
+  }
+  .section-head h2{ font-size:clamp(1.9rem, 4.5vw, 2.8rem); color:var(--color-white); }
+  .section-head p{ margin-top:var(--space-2); color:var(--color-champagne); font-size:1.02rem; font-weight:300; }
+  .gold-rule{
+    width:48px; height:1px; background:var(--color-gold-gradient); margin-top:var(--space-2);
+  }
+
+  /* ---------- About (O mnie) ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:1fr; gap:var(--space-5); align-items:center;
+  }
+  @media (min-width:768px){
+    .about-grid{ grid-template-columns:.85fr 1.15fr; gap:var(--space-6); }
+  }
+  .about-photo{
+    border:1px solid var(--color-gold-1);
+    padding:10px;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+  }
+  .about-photo-inner{ overflow:hidden; aspect-ratio:4/5; border-radius:2px; }
+  .about-photo img{ width:100%; height:100%; object-fit:cover; }
+  .about-content p{ color:rgba(250,250,248,.72); margin-bottom:var(--space-2); max-width:60ch; font-weight:300; }
+  .about-content p:last-of-type{ margin-bottom:var(--space-3); }
+  .about-badges{
+    list-style:none; display:flex; flex-wrap:wrap; gap:var(--space-2); margin:0; padding:0;
+  }
+  .about-badges li{
+    background:transparent; color:var(--color-gold-2); border:1px solid rgba(212,175,55,.5);
+    font-size:.78rem; font-weight:500; letter-spacing:.05em; text-transform:uppercase;
+    padding:.6em 1.1em; border-radius:var(--radius-pill);
+  }
+
+  /* ---------- Masonry gallery ---------- */
+  .masonry{
+    columns:1;
+    column-gap:var(--space-2);
+  }
+  @media (min-width:640px){ .masonry{ columns:2; } }
+  @media (min-width:1024px){ .masonry{ columns:3; column-gap:var(--space-3); } }
+
+  .tile{
+    break-inside:avoid;
+    margin-bottom:var(--space-2);
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    position:relative;
+  }
+  @media (min-width:1024px){ .tile{ margin-bottom:var(--space-3); } }
+
+  .tile-photo{
+    background:var(--color-graphite); line-height:0;
+    border:1px solid rgba(212,175,55,.4);
+    transition:box-shadow var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+  }
+  .tile-photo:hover{ border-color:var(--color-gold-1); box-shadow:var(--glow-gold-soft); }
+  .tile-photo button{
+    display:block; width:100%; padding:0; border:none; background:none; cursor:pointer;
+    line-height:0;
+  }
+  .tile-photo img{ width:100%; height:auto; transition:transform var(--dur-slow) var(--ease-out), filter var(--dur-slow) var(--ease-out); filter:saturate(.92); }
+  .tile-photo button:hover img{ transform:scale(1.05); filter:saturate(1.05); }
+  .tile-photo .tile-zoom{
+    position:absolute; right:var(--space-1); bottom:var(--space-1);
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(13,11,14,.7); color:var(--color-gold-2);
+    border:1px solid rgba(212,175,55,.5);
+    display:flex; align-items:center; justify-content:center;
+    pointer-events:none;
+  }
+
+  /* video tile pattern — add a <video class="tile-video-el" muted loop playsinline> inside .tile-video and it autoplays on hover/focus via JS below */
+  .tile-video{ background:var(--color-black); line-height:0; position:relative; border:1px solid rgba(212,175,55,.4); }
+  .tile-video video{ width:100%; height:100%; object-fit:cover; }
+
+  .tile-service{
+    background:var(--color-graphite);
+    border:1px solid rgba(212,175,55,.22);
+    padding:var(--space-3);
+    display:flex; flex-direction:column; gap:var(--space-1);
+    min-height:220px;
+    justify-content:flex-end;
+  }
+  .tile-service h3{ font-size:1.3rem; color:var(--color-white); }
+  .tile-service .price{
+    font-family:var(--font-display); font-size:2.1rem; font-weight:600;
+    background:var(--color-gold-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;
+    margin-top:var(--space-1);
+  }
+  .tile-service .note{ color:var(--color-champagne); font-size:.88rem; margin-bottom:var(--space-2); font-weight:300; }
+  .tile-service .btn{ align-self:flex-start; }
+
+  .tile-review{
+    background:var(--color-graphite-2);
+    border:1px solid rgba(212,175,55,.22);
+    padding:var(--space-3);
+    display:flex; flex-direction:column; gap:var(--space-2);
+    justify-content:center;
+    min-height:220px;
+  }
+  .stars{ display:flex; gap:4px; color:var(--color-gold-1); }
+  .stars .icon{ width:16px; height:16px; }
+  .tile-review blockquote{ margin:0; font-family:var(--font-display); font-style:italic; font-size:1.08rem; color:var(--color-white); }
+  .tile-review cite{ font-style:normal; font-weight:500; font-size:.85rem; letter-spacing:.04em; color:var(--color-champagne); }
+
+  /* ---------- Cennik ---------- */
+  .cennik-wrap{
+    background:var(--color-graphite);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+    overflow:hidden;
+  }
+  table.cennik{ width:100%; border-collapse:collapse; }
+  table.cennik caption{ text-align:left; padding:var(--space-2) var(--space-3) 0; color:var(--color-champagne); font-size:.85rem; }
+  table.cennik thead th{
+    text-align:left; font-family:var(--font-body); font-weight:500; font-size:.72rem;
+    text-transform:uppercase; letter-spacing:.16em; color:var(--color-gold-1);
+    padding:var(--space-3) var(--space-3) var(--space-2); border-bottom:1px solid rgba(212,175,55,.25);
+  }
+  table.cennik td{
+    padding:var(--space-2) var(--space-3);
+    border-bottom:1px solid rgba(232,220,192,.08);
+    vertical-align:baseline;
+  }
+  table.cennik tbody tr:last-child td{ border-bottom:none; }
+  table.cennik td.svc{
+    display:flex; align-items:baseline; gap:.6em; font-weight:400; color:var(--color-white);
+  }
+  .svc-fill{
+    flex:1; min-width:16px;
+    border-bottom:1px dotted rgba(212,175,55,.55);
+    margin-bottom:.4em;
+  }
+  table.cennik .note-inline{ font-weight:300; color:var(--color-champagne); font-size:.88rem; white-space:nowrap; }
+  table.cennik .price-col{
+    font-family:var(--font-display); font-weight:600; font-size:1.2rem; white-space:nowrap; text-align:right;
+    background:var(--color-gold-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  table.cennik .cennik-group-row th{
+    text-align:left; background:rgba(212,175,55,.08); color:var(--color-gold-2);
+    font-family:var(--font-body); font-weight:500; font-size:.72rem;
+    text-transform:uppercase; letter-spacing:.22em;
+    padding:var(--space-2) var(--space-3); border-bottom:1px solid rgba(212,175,55,.25);
+  }
+  table.cennik .cennik-group-row:first-child th{ border-top:none; }
+  .cennik-foot{
+    padding:var(--space-3);
+    color:rgba(250,250,248,.65);
+    font-size:.92rem;
+    font-weight:300;
+    border-top:1px dashed rgba(212,175,55,.25);
+  }
+  .cennik-foot a{ color:var(--color-gold-2); font-weight:500; text-decoration:underline; }
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid{
+    display:grid; grid-template-columns:1fr; gap:var(--space-3);
+  }
+  @media (min-width:768px){ .reviews-grid{ grid-template-columns:repeat(3,1fr); } }
+  .review-card{
+    background:var(--color-graphite);
+    border:1px solid rgba(212,175,55,.22);
+    border-radius:var(--radius-md);
+    padding:var(--space-3);
+    box-shadow:var(--shadow-soft);
+    display:flex; flex-direction:column; gap:var(--space-2);
+    transition:border-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+  }
+  .review-card:hover{ border-color:var(--color-gold-1); box-shadow:var(--glow-gold-soft); }
+  .review-card blockquote{ margin:0; font-family:var(--font-display); font-style:italic; font-size:1.06rem; color:var(--color-white); }
+  .review-card footer{ font-weight:500; font-size:.85rem; letter-spacing:.04em; color:var(--color-champagne); }
+
+  /* ---------- Contact / footer ---------- */
+  .contact-section{ background:var(--color-graphite); border-top:1px solid rgba(212,175,55,.2); border-bottom:1px solid rgba(212,175,55,.2); }
+  .contact-grid{
+    display:grid; grid-template-columns:1fr; gap:var(--space-4);
+  }
+  @media (min-width:768px){ .contact-grid{ grid-template-columns:1.1fr .9fr; align-items:start; } }
+  .contact-list{ list-style:none; margin:var(--space-3) 0 0; padding:0; display:flex; flex-direction:column; gap:var(--space-2); }
+  .contact-list li{ display:flex; align-items:center; gap:var(--space-2); font-size:1rem; font-weight:300; }
+  .contact-list a{ text-decoration:none; font-weight:500; color:var(--color-gold-2); }
+  .contact-list a:hover{ text-decoration:underline; }
+  .contact-icon{
+    width:44px; height:44px; border-radius:50%; background:var(--color-graphite-2);
+    border:1px solid rgba(212,175,55,.4); color:var(--color-gold-1);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .map-link{
+    display:inline-flex; align-items:center; gap:.5em; margin-top:var(--space-2);
+    font-weight:500; color:var(--color-gold-2); text-decoration:underline;
+  }
+  .contact-card{
+    background:var(--color-black); border:1px solid var(--color-gold-1); border-radius:var(--radius-lg); padding:var(--space-4);
+    box-shadow:var(--glow-gold-soft);
+    text-align:center;
+  }
+  .contact-card h3{ font-size:1.5rem; margin-bottom:var(--space-1); color:var(--color-white); }
+  .contact-card p{ color:var(--color-champagne); margin-bottom:var(--space-3); font-weight:300; }
+
+  footer.site-footer{
+    background:var(--color-black); color:rgba(250,250,248,.6);
+    padding:var(--space-4) 0 calc(var(--space-4) + var(--bottom-bar-h));
+    border-top:1px solid rgba(212,175,55,.15);
+  }
+  @media (min-width:769px){ footer.site-footer{ padding-bottom:var(--space-4); } }
+  .footer-inner{
+    display:flex; flex-direction:column; gap:var(--space-2);
+    align-items:flex-start;
+  }
+  @media (min-width:640px){ .footer-inner{ flex-direction:row; justify-content:space-between; align-items:center; } }
+  .footer-brand{ font-family:var(--font-display); font-size:1.15rem; color:var(--color-gold-2); letter-spacing:.03em; }
+  .footer-meta{ font-size:.82rem; color:rgba(250,250,248,.42); }
+  .footer-social{ display:flex; gap:var(--space-2); }
+  .footer-social a{
+    width:40px; height:40px; border-radius:50%; background:transparent; border:1px solid rgba(212,175,55,.4); color:var(--color-gold-1);
+    display:flex; align-items:center; justify-content:center;
+    transition:background var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+  }
+  .footer-social a:hover{ background:rgba(212,175,55,.1); box-shadow:var(--glow-gold-soft); }
+
+  /* ---------- Sticky mobile booking bar ---------- */
+  .mobile-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:70;
+    background:rgba(13,11,14,.94);
+    backdrop-filter:blur(12px);
+    border-top:1px solid rgba(212,175,55,.3);
+    box-shadow:0 -10px 28px -12px rgba(0,0,0,.7);
+    padding:var(--space-1) var(--space-2) calc(var(--space-1) + env(safe-area-inset-bottom));
+    display:flex; gap:var(--space-1);
+  }
+  .mobile-bar .btn{ flex:1; }
+  @media (min-width:769px){ .mobile-bar{ display:none; } }
+
+  /* ---------- Reveal-on-scroll ---------- */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out); }
+  .reveal.is-visible{ opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .hero-scroll-cue .icon{ animation:none; }
+    .hero-media video, .hero-media .hero-fallback{ transform:none !important; }
+    *{ animation-duration:.001ms !important; transition-duration:.001ms !important; }
+  }
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    position:fixed; inset:0; z-index:100;
+    background:rgba(6,5,7,.95);
+    display:flex; align-items:center; justify-content:center;
+    padding:var(--space-3);
+    opacity:0; pointer-events:none;
+    transition:opacity var(--dur) var(--ease-out);
+  }
+  .lightbox.is-open{ opacity:1; pointer-events:auto; }
+  .lightbox img{
+    max-width:min(90vw, 720px); max-height:80vh; width:auto;
+    border:1px solid var(--color-gold-1);
+    border-radius:var(--radius-sm); box-shadow:0 20px 60px rgba(0,0,0,.7), var(--glow-gold-soft);
+  }
+  .lightbox-close, .lightbox-nav{
+    position:absolute; background:rgba(212,175,55,.1); color:var(--color-gold-2); border:1px solid rgba(212,175,55,.4);
+    width:48px; height:48px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; cursor:pointer;
+    transition:background var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+  }
+  .lightbox-close:hover, .lightbox-nav:hover{ background:rgba(212,175,55,.2); box-shadow:var(--glow-gold-soft); }
+  .lightbox-close{ top:var(--space-3); right:var(--space-3); }
+  .lightbox-prev{ left:var(--space-2); top:50%; transform:translateY(-50%); }
+  .lightbox-next{ right:var(--space-2); top:50%; transform:translateY(-50%); }
+  @media (max-width:640px){ .lightbox-prev, .lightbox-next{ width:40px; height:40px; } }
+
+  .visually-hidden{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Przejdź do treści głównej</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">Yana Abramchenko</a>
+    <nav class="primary-nav" aria-label="Nawigacja główna">
+      <ul>
+        <li><a href="#o-mnie">O mnie</a></li>
+        <li><a href="#galeria">Prace</a></li>
+        <li><a href="#cennik">Cennik</a></li>
+        <li><a href="#opinie">Opinie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-sage btn-sm header-cta" href="https://wa.me/48733074546" target="_blank" rel="noopener">
+      Umów wizytę
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="hero-media" id="heroMedia">
+      <video id="heroVideo" autoplay muted loop playsinline poster="photos/praca-1.jpg" aria-hidden="true">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-fallback" aria-hidden="true"></div>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Manicure Słupsk</p>
+      <h1 class="hero-name">Yana Abramchenko</h1>
+      <div class="hero-divider" aria-hidden="true"></div>
+      <p class="hero-sub">„Twoje paznokcie w dobrych rękach”</p>
+      <p class="hero-desc">Manicure żelowy, precyzja i dbałość o detal — w przytulnym gabinecie przy Szczecińskiej 81 w Słupsku.</p>
+      <div class="hero-actions">
+        <a class="btn btn-sage" href="https://wa.me/48733074546" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm0 1.8c2.14 0 4.14.83 5.66 2.35a7.94 7.94 0 0 1 2.34 5.66c0 4.42-3.6 8.02-8.02 8.02a8 8 0 0 1-4.07-1.11l-.29-.17-3.14.82.84-3.06-.19-.31a7.96 7.96 0 0 1-1.24-4.29c0-4.42 3.6-8.01 8.11-8.01zm-4.42 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.16 3.68 2.05.82 2.47.66 2.92.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42z"/></svg>
+          Umów wizytę na WhatsApp
+        </a>
+        <a class="btn btn-outline" href="#cennik">Zobacz cennik</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 16.5 4.5 9l1.4-1.4L12 13.7l6.1-6.1L19.5 9z"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= O MNIE ================= -->
+  <section id="o-mnie">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="about-photo-inner">
+            <img src="photos/praca-1.jpg" alt="Portret Yany Abramchenko, właścicielki gabinetu manicure w Słupsku" loading="lazy" decoding="async" width="952" height="1280">
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="eyebrow">O mnie</span>
+          <h2>Poznaj Yanę</h2>
+          <p>Nazywam się Yana i od 15 lat zajmuję się stylizacją paznokci. Przez te lata przez moje ręce przeszły tysiące dłoni — i każda z nich nauczyła mnie czegoś nowego.</p>
+          <p>W pracy najważniejsza jest dla mnie precyzja. Dokładnie opracowane skórki, idealnie równe pokrycie, czystość i sterylność narzędzi — to nie dodatki, to podstawa. Pracuję na sprawdzonych żelach, dzięki czemu moje pokrycia są trwałe i wyglądają świeżo przez wiele tygodni.</p>
+          <p>Stale podnoszę swoje kwalifikacje — ukończyłam certyfikowane szkolenia i śledzę nowości w branży, żeby oferować Ci to, co najlepsze.</p>
+          <p>Zapraszam do mojego gabinetu przy Szczecińskiej 81 w Słupsku. Umów się na wizytę — Twoje paznokcie będą w dobrych rękach.</p>
+          <ul class="about-badges">
+            <li>15 lat doświadczenia</li>
+            <li>Certyfikowane szkolenia</li>
+            <li>Sterylność narzędzi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY / MASONRY ================= -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Moje prace</h2>
+        <p>Wybrane realizacje manicure żelowego. Kliknij zdjęcie, aby powiększyć.</p>
+      </div>
+
+      <div class="masonry" id="masonryGrid">
+        <figure class="tile tile-photo reveal">
+          <button type="button" data-lightbox-open data-index="0" aria-label="Powiększ zdjęcie: delikatny manicure ombre z brokatem">
+            <img src="photos/praca-1.jpg" alt="Dłoń z delikatnym manicure żelowym w kolorze mlecznego różu z subtelnym brokatowym ombre" loading="lazy" decoding="async" width="952" height="1280">
+          </button>
+          <span class="tile-zoom" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+          </span>
+        </figure>
+
+        <article class="tile tile-service reveal">
+          <h3>Manicure żelowy</h3>
+          <p class="note">Trwały efekt na 3+ tygodnie, pełne pokrycie</p>
+          <p class="price">170 zł</p>
+          <a class="btn btn-sage btn-sm" href="https://wa.me/48733074546?text=Cze%C5%9B%C4%87!%20Chcia%C5%82abym%20um%C3%B3wi%C4%87%20si%C4%99%20na%20manicure%20%C5%BCelowy" target="_blank" rel="noopener">Umów się</a>
+        </article>
+
+        <figure class="tile tile-photo reveal">
+          <button type="button" data-lightbox-open data-index="1" aria-label="Powiększ zdjęcie: naturalny manicure french na tle liści palmy">
+            <img src="photos/praca-2.jpg" alt="Dłoń z naturalnym manicure żelowym typu baby boomer na tle zielonych liści palmy" loading="lazy" decoding="async" width="1018" height="1199">
+          </button>
+          <span class="tile-zoom" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+          </span>
+        </figure>
+
+        <article class="tile tile-review reveal">
+          <div class="stars" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.7-.6L12 3l2.8 6.3 6.7.6-5.3 4.5L18 21z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.7-.6L12 3l2.8 6.3 6.7.6-5.3 4.5L18 21z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.7-.6L12 3l2.8 6.3 6.7.6-5.3 4.5L18 21z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.7-.6L12 3l2.8 6.3 6.7.6-5.3 4.5L18 21z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.3 6.2 21l1.6-6.6L2.5 9.9l6.7-.6L12 3l2.8 6.3 6.7.6-5.3 4.5L18 21z"/></svg>
+          </div>
+          <blockquote>„Jana ma złote ręce! Manicure trzyma się ponad 3 tygodnie bez odprysków.”</blockquote>
+          <cite>— Magda, Słupsk</cite>
+        </article>
+
+        <figure class="tile tile-photo reveal">
+          <button type="button" data-lightbox-open data-index="2" aria-label="Powiększ zdjęcie: manicure french z brokatem i srebrną biżuterią">
+            <img src="photos/praca-3.jpg" alt="Dłoń z klasycznym manicure french z brokatowym wykończeniem, dłoń ozdobiona srebrnymi pierścionkami" loading="lazy" decoding="async" width="1170" height="1120">
+          </button>
+          <span class="tile-zoom" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+          </span>
+        </figure>
+
+        <article class="tile tile-service reveal">
+          <h3>Manicure żelowy ze zdobieniem</h3>
+          <p class="note">Indywidualny dizajn i dekoracje</p>
+          <p class="price">200 zł</p>
+          <a class="btn btn-sage btn-sm" href="https://wa.me/48733074546?text=Cze%C5%9B%C4%87!%20Chcia%C5%82abym%20um%C3%B3wi%C4%87%20si%C4%99%20na%20manicure%20%C5%BCelowy%20ze%20zdobieniem" target="_blank" rel="noopener">Umów się</a>
+        </article>
+
+        <figure class="tile tile-photo reveal">
+          <button type="button" data-lightbox-open data-index="3" aria-label="Powiększ zdjęcie: zbliżenie na paznokieć w kolorze mauve z białym french tip">
+            <img src="photos/praca-4.jpg" alt="Zbliżenie na pojedynczy paznokieć w stonowanym różowo-mauve odcieniu z białym wykończeniem french tip" loading="lazy" decoding="async" width="949" height="1218">
+          </button>
+          <span class="tile-zoom" aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+          </span>
+        </figure>
+
+        <article class="tile tile-service reveal">
+          <h3>Pedicure z pokryciem żelowym</h3>
+          <p class="note">Żelowe pokrycie, stopy gotowe na sandały</p>
+          <p class="price">200 zł</p>
+          <a class="btn btn-sage btn-sm" href="https://wa.me/48733074546?text=Cze%C5%9B%C4%87!%20Chcia%C5%82abym%20um%C3%B3wi%C4%87%20si%C4%99%20na%20pedicure%20z%20pokryciem%20%C5%BCelowym" target="_blank" rel="noopener">Umów się</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CENNIK ================= -->
+  <section id="cennik">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cennik</span>
+        <h2>Ile kosztuje manicure?</h2>
+        <p>Przejrzyste ceny, bez niespodzianek. Płatność gotówką lub kartą w gabinecie.</p>
+      </div>
+
+      <div class="cennik-wrap reveal">
+        <table class="cennik">
+          <caption class="visually-hidden">Cennik usług manicure i pedicure</caption>
+          <thead>
+            <tr>
+              <th scope="col">Usługa</th>
+              <th scope="col" class="price-col-head">Cena</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cennik-group-row">
+              <th colspan="2" scope="colgroup">Dłonie</th>
+            </tr>
+            <tr>
+              <td class="svc"><span>Manicure klasyczny <span class="note-inline">(bez pokrycia)</span></span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">100 zł</td>
+            </tr>
+            <tr>
+              <td class="svc"><span>Manicure żelowy <span class="note-inline">(z pokryciem)</span></span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">170 zł</td>
+            </tr>
+            <tr>
+              <td class="svc"><span>Manicure żelowy ze zdobieniem <span class="note-inline">(dizajn)</span></span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">200 zł</td>
+            </tr>
+
+            <tr class="cennik-group-row">
+              <th colspan="2" scope="colgroup">Stopy</th>
+            </tr>
+            <tr>
+              <td class="svc"><span>Pedicure klasyczny <span class="note-inline">(bez pokrycia)</span></span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">170 zł</td>
+            </tr>
+            <tr>
+              <td class="svc"><span>Pedicure z pokryciem żelowym</span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">200 zł</td>
+            </tr>
+
+            <tr class="cennik-group-row">
+              <th colspan="2" scope="colgroup">Zdjęcie pokrycia</th>
+            </tr>
+            <tr>
+              <td class="svc"><span>Zdjęcie pokrycia żelowego</span><span class="svc-fill" aria-hidden="true"></span></td>
+              <td class="price-col">70 zł</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="cennik-foot">Dokładna wycena dodatkowych zdobień ustalana jest indywidualnie — napisz na <a href="https://wa.me/48733074546" target="_blank" rel="noopener">WhatsApp</a>, a odpowiem najszybciej jak mogę.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OPINIE ================= -->
+  <section id="opinie">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Opinie</span>
+        <h2>Co mówią klientki</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>„Jana ma złote ręce! Manicure żelowy trzyma się u mnie ponad 3 tygodnie bez odprysków. Gabinet czysty i przytulny, a umówienie się przez WhatsApp to sama przyjemność.”</blockquote>
+          <footer>— Magda, Słupsk</footer>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>„Wreszcie znalazłam manicurzystkę, która słucha, czego naprawdę chcę. Zdobienia zawsze dopracowane w najmniejszym szczególe. Polecam każdej koleżance!”</blockquote>
+          <footer>— Ola K.</footer>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>„Profesjonalizm na najwyższym poziomie — punktualność, higiena i efekt, który zachwyca za każdym razem. Pedicure też super, stopy jak nowe.”</blockquote>
+          <footer>— Kasia W.</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section id="kontakt" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Kontakt</span>
+          <h2>Umów się na wizytę</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.7.2.2.5.3.7.3s.5-.1.7-.3C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 10.5A2.5 2.5 0 1 1 12 7.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              </span>
+              <span>Szczecińska 81, Słupsk</span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm8.94 3a8.99 8.99 0 0 0-7.94-7.94V1h-2v2.06A8.99 8.99 0 0 0 3.06 11H1v2h2.06A8.99 8.99 0 0 0 11 20.94V23h2v-2.06A8.99 8.99 0 0 0 20.94 13H23v-2zM12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/></svg>
+              </span>
+              <span>Codziennie 8:30 – 18:00</span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+              </span>
+              <a href="tel:+48733074546">733 074 546</a>
+            </li>
+          </ul>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Szczeci%C5%84ska%2081%2C%20S%C5%82upsk" target="_blank" rel="noopener">
+            Zobacz na mapie
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16"><path d="M14 3v2h3.6l-9.8 9.8 1.4 1.4L19 6.4V10h2V3zM5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6h-2v6H5z"/></svg>
+          </a>
+        </div>
+
+        <div class="contact-card reveal">
+          <h3>Zarezerwuj termin</h3>
+          <p>Napisz na WhatsApp — odpowiadam najszybciej jak mogę i ustalę dogodny termin.</p>
+          <a class="btn btn-sage btn-block" href="https://wa.me/48733074546" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm0 1.8c2.14 0 4.14.83 5.66 2.35a7.94 7.94 0 0 1 2.34 5.66c0 4.42-3.6 8.02-8.02 8.02a8 8 0 0 1-4.07-1.11l-.29-.17-3.14.82.84-3.06-.19-.31a7.96 7.96 0 0 1-1.24-4.29c0-4.42 3.6-8.01 8.11-8.01zm-4.42 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.16 3.68 2.05.82 2.47.66 2.92.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42z"/></svg>
+            Umów wizytę na WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">Yana Abramchenko · Manicure Słupsk</p>
+      <p class="footer-meta">Szczecińska 81, Słupsk · Codziennie 8:30–18:00 · 733 074 546</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://wa.me/48733074546" target="_blank" rel="noopener" aria-label="Napisz na WhatsApp">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm0 1.8c2.14 0 4.14.83 5.66 2.35a7.94 7.94 0 0 1 2.34 5.66c0 4.42-3.6 8.02-8.02 8.02a8 8 0 0 1-4.07-1.11l-.29-.17-3.14.82.84-3.06-.19-.31a7.96 7.96 0 0 1-1.24-4.29c0-4.42 3.6-8.01 8.11-8.01zm-4.42 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.16 3.68 2.05.82 2.47.66 2.92.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42z"/></svg>
+      </a>
+      <a href="#" aria-label="Instagram (wkrótce)">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= Sticky mobile CTA bar ================= -->
+<div class="mobile-bar">
+  <a class="btn btn-sage" href="tel:+48733074546" aria-label="Zadzwoń: 733 074 546">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+    Zadzwoń
+  </a>
+  <a class="btn btn-sage" href="https://wa.me/48733074546" target="_blank" rel="noopener">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.33 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm0 1.8c2.14 0 4.14.83 5.66 2.35a7.94 7.94 0 0 1 2.34 5.66c0 4.42-3.6 8.02-8.02 8.02a8 8 0 0 1-4.07-1.11l-.29-.17-3.14.82.84-3.06-.19-.31a7.96 7.96 0 0 1-1.24-4.29c0-4.42 3.6-8.01 8.11-8.01zm-4.42 4.6c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.7 2.7 4.16 3.68 2.05.82 2.47.66 2.92.62.45-.04 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.36-.76-1.85-.2-.48-.4-.42-.55-.42z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<!-- ================= Lightbox ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij podgląd">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.71 12 12.01l-6.29-6.3-1.42 1.42 6.3 6.29-6.3 6.29 1.42 1.42 6.29-6.3 6.29 6.3 1.42-1.42-6.3-6.29 6.3-6.29z"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Poprzednie zdjęcie">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Następne zdjęcie">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4L13.2 12z"/></svg>
+  </button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Hero video fallback ---- */
+  var heroMedia = document.getElementById('heroMedia');
+  var heroVideo = document.getElementById('heroVideo');
+  function useFallback(){ heroMedia.classList.add('no-video'); }
+  if (heroVideo) {
+    heroVideo.addEventListener('error', useFallback, true);
+    var src = heroVideo.querySelector('source');
+    if (src) src.addEventListener('error', useFallback);
+    heroVideo.addEventListener('loadeddata', function(){
+      heroMedia.classList.remove('no-video');
+    });
+    // if nothing has loaded shortly after paint, assume the file is missing
+    setTimeout(function(){
+      if (heroVideo.readyState === 0) useFallback();
+    }, 1200);
+  } else {
+    useFallback();
+  }
+
+  /* ---- Hero subtle parallax ---- */
+  if (!reduceMotion) {
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function(){
+        var y = window.scrollY;
+        if (y < window.innerHeight) {
+          var offset = y * 0.25;
+          heroVideo.style.transform = 'translateY(' + offset + 'px) scale(1.08)';
+          var fb = heroMedia.querySelector('.hero-fallback');
+          if (fb) fb.style.transform = 'translateY(' + offset + 'px) scale(1.08)';
+        }
+        ticking = false;
+      });
+    }, { passive: true });
+
+    // pause hero video off-screen to save resources
+    if ('IntersectionObserver' in window && heroVideo) {
+      var heroObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) { heroVideo.play().catch(function(){}); }
+          else { heroVideo.pause(); }
+        });
+      }, { threshold: 0.1 });
+      heroObserver.observe(heroMedia);
+    }
+  }
+
+  /* ---- Scroll reveal ---- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry, i){
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var siblings = Array.prototype.slice.call(el.parentElement.children).filter(function(c){ return c.classList.contains('reveal'); });
+          var idx = siblings.indexOf(el);
+          el.style.transitionDelay = Math.min(idx * 45, 270) + 'ms';
+          el.classList.add('is-visible');
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---- Hover/focus autoplay for optional video tiles ---- */
+  document.querySelectorAll('.tile-video video').forEach(function(v){
+    var tile = v.closest('.tile-video');
+    if (!tile) return;
+    tile.addEventListener('mouseenter', function(){ v.play().catch(function(){}); });
+    tile.addEventListener('mouseleave', function(){ v.pause(); });
+    tile.addEventListener('focusin', function(){ v.play().catch(function(){}); });
+    tile.addEventListener('focusout', function(){ v.pause(); });
+  });
+
+  /* ---- Lightbox ---- */
+  var photos = Array.prototype.slice.call(document.querySelectorAll('#masonryGrid .tile-photo img'));
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var closeBtn = document.getElementById('lightboxClose');
+  var prevBtn = document.getElementById('lightboxPrev');
+  var nextBtn = document.getElementById('lightboxNext');
+  var currentIndex = 0;
+  var lastFocused = null;
+
+  function openLightbox(index){
+    currentIndex = index;
+    var img = photos[index];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lastFocused = document.activeElement;
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function closeLightbox(){
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+  function showDelta(delta){
+    currentIndex = (currentIndex + delta + photos.length) % photos.length;
+    var img = photos[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+  }
+
+  document.querySelectorAll('[data-lightbox-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openLightbox(parseInt(btn.getAttribute('data-index'), 10));
+    });
+  });
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', function(){ showDelta(-1); });
+  nextBtn.addEventListener('click', function(){ showDelta(1); });
+  lightbox.addEventListener('click', function(e){
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showDelta(-1);
+    if (e.key === 'ArrowRight') showDelta(1);
+  });
+})();
+</script>
+
+</body>
+</html>
